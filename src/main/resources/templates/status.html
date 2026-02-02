@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Status da API</title>
+    <style>
+        body {
+          background-color: #ffffff;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: #1e293b;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          height: 100vh;
+          margin: 0;
+          padding: 0 20px;
+        }
+
+        img {
+          width: 120px;
+          margin-bottom: 20px;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+          color: #0f172a;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 10px;
+          color: #475569;
+        }
+
+        .ok {
+          color: green;
+          font-weight: bold;
+        }
+
+        .uptime {
+          font-size: 1rem;
+          color: #64748b;
+        }
+
+        a.button {
+          background-color: #0f172a;
+          color: #ffffff;
+          padding: 10px 20px;
+          text-decoration: none;
+          font-weight: bold;
+          border-radius: 8px;
+          margin-top: 20px;
+        }
+
+        a.button:hover {
+          background-color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+<img src="/devops.png" alt="DevOps Automation Logo">
+<h1>Status da API</h1>
+<p class="ok">Sistema funcionando normalmente ✅</p>
+<p class="uptime">Uptime: <span th:text="${uptime}">...</span> ms</p>
+<a href="/" class="button">Voltar para Home</a>
+</body>
+</html>

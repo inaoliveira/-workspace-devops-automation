@@ -1,0 +1,5543 @@
+{
+  "items": [
+      {
+          "name": "PVH-WFH-KIT04-SW001",
+          "serial": "Q2BX-58U7-WK33",
+          "mac": "34:56:fe:2d:f4:8d",
+          "network": {
+              "id": "L_797137134044580541",
+              "name": "PVH-WFH-KIT04-AMANDA"
+          },
+          "model": "MS120-8LP",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": true,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      },
+      {
+          "name": "LAB-RTL-WIPRO-SW01",
+          "serial": "Q2CX-S35A-DAMQ",
+          "mac": "ac:17:c8:a7:95:42",
+          "network": {
+              "id": "L_797137134044580065",
+              "name": "LAB-RTL-WIPRO"
+          },
+          "model": "MS120-8FP",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": false,
+                  "status": "Disabled",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disabled",
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": false,
+                  "status": "Disabled",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disabled",
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": false,
+                  "status": "Disabled",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disabled",
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": false,
+                  "status": "Disabled",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disabled",
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": false,
+                  "status": "Disabled",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disabled",
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": false,
+                  "status": "Disabled",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disabled",
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": true,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      },
+      {
+          "name": "LAB-TYCO-BOCA-SW001",
+          "serial": "Q2EX-53J6-4UM8",
+          "mac": "98:18:88:a1:19:41",
+          "network": {
+              "id": "L_607985949695027619",
+              "name": "LAB-TYCO-BOCA-FL"
+          },
+          "model": "MS120-24P",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": true
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "100 Mbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "11",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "12",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "13",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "14",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "15",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "16",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "17",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "18",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "100 Mbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": true
+                  }
+              },
+              {
+                  "portId": "19",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "20",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "21",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "22",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": true,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "23",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Blocking",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "24",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Blocking",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "25",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "26",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "27",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "28",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      },
+      {
+          "name": "India-SAP-LAB-SW001",
+          "serial": "Q2EX-6X26-5SHU",
+          "mac": "34:56:fe:b4:5a:a2",
+          "network": {
+              "id": "L_797137134044579904",
+              "name": "India-SAP-LAB"
+          },
+          "model": "MS120-24P",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": true
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "11",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "12",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "13",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "14",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "15",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "16",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "17",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "18",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "19",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "20",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "21",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "22",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": true,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "23",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "24",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "25",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "26",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "27",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "28",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      },
+      {
+          "name": "PVH-WFH-KIT07-SW001",
+          "serial": "Q2EX-AN6A-QZUC",
+          "mac": "34:56:fe:d7:0d:08",
+          "network": {
+              "id": "L_607985949695028838",
+              "name": "PVH-WFH-KIT07-SONJA"
+          },
+          "model": "MS120-24P",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": true
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "11",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "12",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "13",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "14",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "15",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "16",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "17",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "18",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "19",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "20",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "21",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "22",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": true,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "23",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "24",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "25",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "26",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "27",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "28",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      },
+      {
+          "name": "PVH-WFH-KIT02-SW001",
+          "serial": "Q2EX-AUGT-JD58",
+          "mac": "34:56:fe:d7:1d:8e",
+          "network": {
+              "id": "L_607985949695028039",
+              "name": "PVH-WFH-KIT02-KATHYH"
+          },
+          "model": "MS120-24P",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "11",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "12",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "13",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "14",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "15",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "16",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "17",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "18",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "19",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "20",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "21",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "22",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "23",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": true,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "24",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "25",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "26",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "27",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "28",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      },
+      {
+          "name": "PVH-WFH-KIT03-SW001",
+          "serial": "Q2EX-EK39-C38A",
+          "mac": "34:56:fe:d8:2e:7c",
+          "network": {
+              "id": "L_607985949695028041",
+              "name": "PVH-WFH-KIT03-ARMINB"
+          },
+          "model": "MS120-24P",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "100 Mbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "11",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "12",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "13",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "14",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "15",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "16",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "17",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "18",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "19",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "20",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "21",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "22",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "23",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "24",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": true,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "25",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "26",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "27",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "28",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      },
+      {
+          "name": "India-SAP-LAB-SW002",
+          "serial": "Q2EX-L7V3-MR4T",
+          "mac": "34:56:fe:b5:f3:08",
+          "network": {
+              "id": "L_797137134044579904",
+              "name": "India-SAP-LAB"
+          },
+          "model": "MS120-24P",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "11",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "12",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "13",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "14",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "15",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "16",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "17",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "18",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "19",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "20",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "21",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "22",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": true,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "23",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "24",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "25",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "26",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "27",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "28",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      },
+      {
+          "name": "Lab-PCMS-SW2",
+          "serial": "Q2EX-QTWZ-KVEB",
+          "mac": "34:56:fe:e4:48:38",
+          "network": {
+              "id": "L_607985949695025871",
+              "name": "LAB_PCMS"
+          },
+          "model": "MS120-24P",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "10 Mbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "11",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "12",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "13",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "14",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "15",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "16",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "17",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "100 Mbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "18",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "19",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "20",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "21",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "22",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": true,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "23",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "24",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "25",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "26",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "27",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "28",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      },
+      {
+          "name": "Lab-PCMS-SW1",
+          "serial": "Q2EX-R5VS-P9KD",
+          "mac": "34:56:fe:e4:60:98",
+          "network": {
+              "id": "L_607985949695025871",
+              "name": "LAB_PCMS"
+          },
+          "model": "MS120-24P",
+          "ports": [
+              {
+                  "portId": "1",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is edge",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": true
+                  }
+              },
+              {
+                  "portId": "2",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "3",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "4",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "5",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "6",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "7",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "8",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "9",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "10",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "11",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "12",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "13",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "14",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "15",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "16",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "17",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "18",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "19",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "20",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "21",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "22",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": true,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Forwarding",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "23",
+                  "enabled": true,
+                  "status": "Connected",
+                  "isUplink": false,
+                  "errors": [],
+                  "warnings": [],
+                  "speed": "1 Gbps",
+                  "duplex": "full",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": [
+                          "Blocking",
+                          "Is peer-to-peer"
+                      ]
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "24",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "25",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "26",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "27",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              },
+              {
+                  "portId": "28",
+                  "enabled": true,
+                  "status": "Disconnected",
+                  "isUplink": false,
+                  "errors": [
+                      "Port disconnected"
+                  ],
+                  "warnings": [],
+                  "speed": "",
+                  "duplex": "",
+                  "securePort": {
+                      "active": false,
+                      "authenticationStatus": "Disabled"
+                  },
+                  "spanningTree": {
+                      "statuses": []
+                  },
+                  "poe": {
+                      "isAllocated": false
+                  }
+              }
+          ]
+      }
+  ],
+  "meta": {
+      "counts": {
+          "items": {
+              "total": 16,
+              "remaining": 6
+          }
+      }
+  }
+}

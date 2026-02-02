@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>DevOps Automation API</title>
+    <style>
+        body {
+          background-color: #ffffff;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          color: #1e293b;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+          padding: 0 20px;
+          text-align: center;
+        }
+
+        img {
+          width: 150px;
+          margin-bottom: 20px;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+          margin: 10px 0;
+          color: #0f172a;
+        }
+
+        p {
+          font-size: 1.2rem;
+          margin-bottom: 30px;
+          color: #475569;
+        }
+
+        .buttons {
+          display: flex;
+          gap: 20px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        a.button {
+          background-color: #0f172a;
+          color: #ffffff;
+          padding: 12px 24px;
+          text-decoration: none;
+          font-weight: bold;
+          border-radius: 8px;
+          transition: background-color 0.2s ease;
+        }
+
+        a.button:hover {
+          background-color: #1e40af;
+        }
+    </style>
+</head>
+<body>
+<img src="/devops.png" alt="DevOps Automation Logo">
+<h1>Bem-vindo à API DevOps Automation</h1>
+<p>Explore automação com Java, Docker, CI/CD e muito mais</p>
+
+<div class="buttons">
+    <a href="/api/hello" class="button">Testar /api/hello</a>
+    <a href="/swagger-ui.html" class="button">Abrir Swagger</a>
+    <a href="/status" class="button">Verificar Status</a>
+    <a href="/cep" class="button">Buscar CEP</a>
+</div>
+</body>
+</html>

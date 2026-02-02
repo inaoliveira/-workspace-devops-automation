@@ -1,0 +1,42 @@
+# Java
+*.class
+*.log
+*.ctxt
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/timing.properties
+
+# IDEs
+*.iml
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs e Temp
+logs/
+*.tmp
+*.bak
+
+# Credenciais sensíveis
+*.pem
+*.key
+*.env
+
+# IntelliJ local configs
+out/
+*.iws
+
+# Arquivos do Spring Boot devtools
+.spring-boot-devtools.properties
+
+# Docker
+*.dockerfile
+docker-compose.override.yml
+
+# Arquivos do sistema
+*.swp
