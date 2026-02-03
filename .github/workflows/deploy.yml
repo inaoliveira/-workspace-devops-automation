@@ -1,8 +1,5 @@
 name: 🚀 Deploy Terraform to Azure (Com Destroy option)
 
-# =====================================================
-# TRIGGERS - Simplificado como o professor
-# =====================================================
 on:
   workflow_dispatch:
     inputs:
@@ -19,10 +16,18 @@ permissions:
   id-token: write
   contents: read
 
+# =====================================================
+# ENV - Configuração GLOBAL para todos os jobs
+# =====================================================
+env:
+  ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+  ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+  ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+  ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
+  ARM_USE_CLI: true  # ← ESSA É A CHAVE MÁGICA!
+  # **POR QUÊ?** Diz ao Terraform: "Use o login do AZ CLI, não tente SP próprio!"
+
 jobs:
-  # =========================================
-  # JOB 1: VALIDATE - Sem fmt -check!
-  # =========================================
   validate:
     if: github.event.inputs.destroy == 'false'
     name: 🔎 Validar Terraform
@@ -32,7 +37,7 @@ jobs:
       - name: 📥 Checkout
         uses: actions/checkout@v3
 
-      - name: 🔐 Azure Login
+      - name: 🔐 Azure Login (OIDC)
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -42,33 +47,25 @@ jobs:
         with:
           terraform_version: '1.6.0'
 
-      - name: 📦 Terraform Init (Backend remoto!)
+      - name: 📦 Terraform Init
         working-directory: infra
         run: |
-          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
           terraform init \
-            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
-            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
-            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
             -backend-config="key=prod.terraform.tfstate"
 
-      - name: ✅ Terraform Validate (Sintaxe)
+      - name: ✅ Terraform Validate
         working-directory: infra
         run: terraform validate
 
-      - name: 📋 Terraform Plan (Dry-run)
+      - name: 📋 Terraform Plan
         working-directory: infra
         run: |
-          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
           terraform plan \
             -var="resource_group_name=${{ vars.AZURE_RG }}" \
             -var="location=${{ vars.AZURE_LOCATION }}" \
             -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" \
             -input=false
 
-  # =========================================
-  # JOB 2: DEPLOY - Deploy e Ansible
-  # =========================================
   deploy:
     if: github.event.inputs.destroy == 'false'
     name: 🚀 Deploy e Configuração
@@ -98,18 +95,12 @@ jobs:
       - name: 📦 Terraform Init
         working-directory: infra
         run: |
-          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
           terraform init \
-            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
-            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
-            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
             -backend-config="key=prod.terraform.tfstate"
 
       - name: 🚀 Terraform Apply
         working-directory: infra
-        run: |
-          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
-          terraform apply -auto-approve
+        run: terraform apply -auto-approve
 
       - name: 📤 Capturar Outputs
         id: output_vm
@@ -136,9 +127,6 @@ jobs:
           ansible-playbook -i inventory ansible/playbook.yml \
             --extra-vars "ansible_sudo_pass=${{ secrets.ADMIN_PASSWORD }}"
 
-  # =========================================
-  # JOB 3: POST-TESTS - Validação Final
-  # =========================================
   post-tests:
     if: github.event.inputs.destroy == 'false'
     name: ✅ Pós-Testes de Infra
@@ -156,7 +144,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 🧪 Testar Swagger na Porta 8081
+      - name: 🧪 Testar Swagger
         run: |
           echo "Aguardando aplicação subir com Swagger..."
           sleep 30
@@ -198,18 +186,13 @@ jobs:
             echo "✅ Porta 8081 está liberada corretamente na NSG!"
           fi
 
-  # =========================================
-  # JOB 4: DESTROY - Destruição controlada
-  # =========================================
   destroy:
     if: github.event.inputs.destroy == 'true'
     name: 🧨 Destruir Infraestrutura
     runs-on: ubuntu-latest
-    env:
-      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
 
     steps:
-      - name: 📥 Checkout do código
+      - name: 📥 Checkout
         uses: actions/checkout@v3
 
       - name: 🔐 Azure Login
@@ -225,11 +208,7 @@ jobs:
       - name: 📦 Terraform Init
         working-directory: infra
         run: |
-          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
           terraform init \
-            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
-            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
-            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
             -backend-config="key=prod.terraform.tfstate"
 
       - name: 💥 Terraform Destroy
