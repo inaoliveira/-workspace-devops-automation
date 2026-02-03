@@ -2,7 +2,7 @@
 terraform {
   backend "azurerm" {
     resource_group_name  = "rg-tfstate"
-    storage_account_name = "tfstatecurso17230" # Sua storage account criada com sucesso
+    storage_account_name = "tfstatecurso17230"
     container_name       = "tfstate"
     key                  = "prod.terraform.tfstate"
   }
@@ -34,13 +34,13 @@ resource "azurerm_subnet" "subnet" {
   address_prefixes     = ["10.0.1.0/24"]
 }
 
-# 4. IP Público (CORRIGIDO: SKU Standard para evitar erro de cota)
+# 4. IP Público (SKU Standard para evitar erro de cota)
 resource "azurerm_public_ip" "public_ip" {
   name                = "public-ip-vm"
   location            = azurerm_resource_group.rg.location
   resource_group_name = azurerm_resource_group.rg.name
-  allocation_method   = "Static" # Obrigatório para SKU Standard
-  sku                 = "Standard" # Mudança essencial para contas de teste/estudante
+  allocation_method   = "Static"
+  sku                 = "Standard" 
 }
 
 # 5. Interface de Rede (NIC)
@@ -82,7 +82,7 @@ resource "azurerm_network_security_group" "nsg" {
     access                     = "Allow"
     protocol                   = "Tcp"
     source_port_range          = "*"
-    destination_port_range     = "8081" # Porta definida no seu diagrama de infra
+    destination_port_range     = "8081"
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
@@ -94,15 +94,15 @@ resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
   network_security_group_id = azurerm_network_security_group.nsg.id
 }
 
-# 8. Máquina Virtual Linux (VM)
+# 8. Máquina Virtual Linux (VM) - Configurada para D2s_v3
 resource "azurerm_linux_virtual_machine" "vm" {
   name                            = "vm-automation"
   resource_group_name             = azurerm_resource_group.rg.name
   location                        = azurerm_resource_group.rg.location
-  size                            = "Standard_B1s" # Ideal para laboratório
+  size                            = "Standard_D2s_v3" # Novo tamanho para evitar SkuNotAvailable
   admin_username                  = "azureuser"
   admin_password                  = var.admin_password
-  disable_password_authentication = false # Permite usar a senha definida no Secret
+  disable_password_authentication = false
 
   network_interface_ids = [
     azurerm_network_interface.nic.id
