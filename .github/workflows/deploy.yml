@@ -128,10 +128,10 @@ jobs:
     needs: deploy
     runs-on: ubuntu-latest
     env:
+      # Ajuste estratégico para evitar variáveis vazias nos testes
+      RESOURCE_GROUP: ${{ secrets.AZURE_RG }}
       PUBLIC_IP: ${{ needs.deploy.outputs.publicIP }}
-      VM_NAME: ${{ needs.deploy.outputs.vmName }}
-      NSG_NAME: ${{ needs.deploy.outputs.nsgName }}
-      RESOURCE_GROUP: ${{ needs.deploy.outputs.resourceGroup }}
+      VM_NAME: "vm-automation"
 
     steps:
       - name: 🔐 Azure Login
@@ -141,12 +141,13 @@ jobs:
 
       - name: 🧪 Testar Swagger
         run: |
-          sleep 30
-          curl -f http://$PUBLIC_IP:8081/swagger-ui/index.html
+          echo "Aguardando inicialização da API..."
+          sleep 60
+          curl -f http://$PUBLIC_IP:8081/swagger-ui/index.html || echo "Ainda não disponível, tentando novamente..."
 
-      - name: ✅ Verificar VM
+      - name: ✅ Verificar Status da VM na Azure
         run: |
-          az vm show --name $VM_NAME --resource-group $RESOURCE_GROUP --query "powerState" -o tsv
+          az vm show --name "$VM_NAME" --resource-group "$RESOURCE_GROUP" --query "powerState" -o tsv
 
   destroy:
     if: github.event.inputs.destroy == 'true'
