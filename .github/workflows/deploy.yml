@@ -54,8 +54,8 @@ jobs:
         working-directory: infra
         run: |
           terraform plan \
-            -var="resource_group_name=${{ vars.AZURE_RG }}" \
-            -var="location=${{ vars.AZURE_LOCATION }}" \
+            -var="resource_group_name=${{ secrets.AZURE_RG }}" \
+            -var="location=${{ secrets.AZURE_LOCATION }}" \
             -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" \
             -input=false
 
@@ -92,8 +92,8 @@ jobs:
         working-directory: infra
         run: |
           terraform apply \
-            -var="resource_group_name=${{ vars.AZURE_RG }}" \
-            -var="location=${{ vars.AZURE_LOCATION }}" \
+            -var="resource_group_name=${{ secrets.AZURE_RG }}" \
+            -var="location=${{ secrets.AZURE_LOCATION }}" \
             -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" \
             -auto-approve
 
@@ -152,7 +152,6 @@ jobs:
     if: github.event.inputs.destroy == 'true'
     name: 🧨 Destruir Infraestrutura
     runs-on: ubuntu-latest
-
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v3
@@ -173,4 +172,9 @@ jobs:
 
       - name: 💥 Terraform Destroy
         working-directory: infra
-        run: terraform destroy -auto-approve
+        run: |
+          terraform destroy \
+            -var="resource_group_name=${{ secrets.AZURE_RG }}" \
+            -var="location=${{ secrets.AZURE_LOCATION }}" \
+            -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" \
+            -auto-approve
