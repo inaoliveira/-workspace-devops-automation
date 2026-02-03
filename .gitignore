@@ -1,0 +1,22 @@
+# Terraform: ignora pastas de binários e estado local
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Terraform: ignora variáveis sensíveis (onde ficam senhas e tokens)
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+
+# Docker & Java
+target/
+*.jar
+.mvn/
+mvnw
+mvnw.cmd
+
+# Sistema e IDE
+.DS_Store
+.vscode/

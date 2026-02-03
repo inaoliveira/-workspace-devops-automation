@@ -1,7 +1,7 @@
-name: 🚀 Deploy Terraform to Azure (Com Destroy Option)
+name: 🚀 Deploy Terraform to Azure (Com Destroy option)
 
 # =====================================================
-# TRIGGERS - Simplificado como o professor quer
+# TRIGGERS - Simplificado como o professor
 # =====================================================
 on:
   workflow_dispatch:
@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   # =========================================
-  # JOB 1: VALIDATE - Só valida, NÃO formata
+  # JOB 1: VALIDATE - Sem fmt -check!
   # =========================================
   validate:
     if: github.event.inputs.destroy == 'false'
@@ -29,10 +29,10 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: 📥 Checkout do código
+      - name: 📥 Checkout
         uses: actions/checkout@v3
 
-      - name: 🔐 Login no Azure
+      - name: 🔐 Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -42,28 +42,24 @@ jobs:
         with:
           terraform_version: '1.6.0'
 
-      - name: 📦 Terraform Init
+      - name: 📦 Terraform Init (Backend remoto!)
         working-directory: infra
         run: |
           export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
-          terraform init -backend-config="key=prod.terraform.tfstate"
+          terraform init \
+            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
+            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
+            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
+            -backend-config="key=prod.terraform.tfstate"
 
-      # =====================================================
-      # REMOVIDO: terraform fmt -check
-      # POR QUÊ? Ele retorna código 1 se arquivos não estão formatados!
-      # ISSO QUEBRA O PIPELINE DESNECESSARIAMENTE
-      # =====================================================
-      
       - name: ✅ Terraform Validate (Sintaxe)
         working-directory: infra
         run: terraform validate
 
-      # =====================================================
-      # PLAN SEM SALVAR ARTEFATO - Só valida lógica
-      # =====================================================
       - name: 📋 Terraform Plan (Dry-run)
         working-directory: infra
         run: |
+          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
           terraform plan \
             -var="resource_group_name=${{ vars.AZURE_RG }}" \
             -var="location=${{ vars.AZURE_LOCATION }}" \
@@ -71,7 +67,7 @@ jobs:
             -input=false
 
   # =========================================
-  # JOB 2: DEPLOY - Provisiona e Configura
+  # JOB 2: DEPLOY - Deploy e Ansible
   # =========================================
   deploy:
     if: github.event.inputs.destroy == 'false'
@@ -103,14 +99,17 @@ jobs:
         working-directory: infra
         run: |
           export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
-          terraform init -backend-config="key=prod.terraform.tfstate"
+          terraform init \
+            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
+            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
+            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
+            -backend-config="key=prod.terraform.tfstate"
 
-      # =====================================================
-      # APLICA SEM PLAN SEPARADO - Simplificado como professor
-      # =====================================================
       - name: 🚀 Terraform Apply
         working-directory: infra
-        run: terraform apply -auto-approve
+        run: |
+          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
+          terraform apply -auto-approve
 
       - name: 📤 Capturar Outputs
         id: output_vm
@@ -122,9 +121,6 @@ jobs:
           echo "nsg_name=$(terraform output -raw nsg_name)" >> $GITHUB_OUTPUT
           echo "resource_group=$(terraform output -raw resource_group_name)" >> $GITHUB_OUTPUT
 
-      # =====================================================
-      # CONFIGURAÇÃO ANSIBLE - Mesma lógica do professor
-      # =====================================================
       - name: 🔧 Instalar Ansible e sshpass
         run: |
           sudo apt-get update
@@ -135,9 +131,10 @@ jobs:
           echo "[vm]" > inventory
           echo "${{ steps.output_vm.outputs.public_ip }} ansible_user=azureuser ansible_password=${{ secrets.ADMIN_PASSWORD }} ansible_ssh_common_args='-o StrictHostKeyChecking=no'" >> inventory
 
-      - name: 📘 Executar Playbook
+      - name: 📘 Executar Playbook Ansible
         run: |
-          ansible-playbook -i inventory ansible/playbook.yml --extra-vars "ansible_sudo_pass=${{ secrets.ADMIN_PASSWORD }}"
+          ansible-playbook -i inventory ansible/playbook.yml \
+            --extra-vars "ansible_sudo_pass=${{ secrets.ADMIN_PASSWORD }}"
 
   # =========================================
   # JOB 3: POST-TESTS - Validação Final
@@ -159,7 +156,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 🧪 Testar Swagger
+      - name: 🧪 Testar Swagger na Porta 8081
         run: |
           echo "Aguardando aplicação subir com Swagger..."
           sleep 30
@@ -202,15 +199,17 @@ jobs:
           fi
 
   # =========================================
-  # JOB 4: DESTROY - Limpeza
+  # JOB 4: DESTROY - Destruição controlada
   # =========================================
   destroy:
     if: github.event.inputs.destroy == 'true'
     name: 🧨 Destruir Infraestrutura
     runs-on: ubuntu-latest
+    env:
+      ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
 
     steps:
-      - name: 📥 Checkout
+      - name: 📥 Checkout do código
         uses: actions/checkout@v3
 
       - name: 🔐 Azure Login
@@ -227,7 +226,11 @@ jobs:
         working-directory: infra
         run: |
           export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
-          terraform init -backend-config="key=prod.terraform.tfstate"
+          terraform init \
+            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
+            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
+            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
+            -backend-config="key=prod.terraform.tfstate"
 
       - name: 💥 Terraform Destroy
         working-directory: infra

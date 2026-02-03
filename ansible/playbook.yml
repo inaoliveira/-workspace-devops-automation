@@ -1,0 +1,52 @@
+---
+- name: Instalar Docker no Ubuntu
+  hosts: vm
+  become: yes
+  tasks:
+    - name: Instalar dependências
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gnupg
+          - lsb-release
+        state: present
+        update_cache: yes
+
+    - name: Adicionar chave GPG oficial do Docker
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Adicionar repositório do Docker
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+        state: present
+
+    - name: Atualizar cache do apt e instalar Docker
+      apt:
+        name: docker-ce
+        state: present
+        update_cache: yes
+
+    - name: Adicionar usuário ao grupo Docker
+      user:
+        name: "{{ ansible_user }}"
+        groups: docker
+        append: yes
+
+    - name: Iniciar e habilitar serviço Docker
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+        
+    - name: Executar container da aplicação Java
+      docker_container:
+        name: java-api
+        image: iesodias/java-api:latest
+        state: started
+        restart_policy: always
+        published_ports:
+          - "8081:8081"
