@@ -1,0 +1,192 @@
+name: 🚀 Deploy Azure VM + Docker Pipeline
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'infra/**'
+      - 'ansible/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+    inputs:
+      destroy:
+        description: '🧨 DESTRUIR toda infraestrutura?'
+        required: true
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  terraform-validate:
+    if: github.event.inputs.destroy != 'true'
+    name: 🔎 Validar Terraform
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 🔐 Login no Azure (OIDC)
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: 🔧 Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: '1.6.0'
+
+      - name: 📦 Terraform Init
+        working-directory: ./infra
+        run: |
+          terraform init \
+            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
+            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
+            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
+            -backend-config="key=prod.terraform.tfstate"
+
+      - name: ✅ Terraform Validate
+        working-directory: ./infra
+        run: terraform validate -no-color
+
+      - name: 📋 Terraform Plan
+        working-directory: ./infra
+        run: |
+          terraform plan \
+            -var="resource_group_name=${{ vars.AZURE_RG }}" \
+            -var="location=${{ vars.AZURE_LOCATION }}" \
+            -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" \
+            -out=tfplan \
+            -input=false \
+            -no-color
+
+  terraform-deploy:
+    if: github.event.inputs.destroy != 'true'
+    name: 🚀 Deploy Infra
+    needs: terraform-validate
+    runs-on: ubuntu-latest
+    outputs:
+      vm_ip: ${{ steps.outputs.outputs.public_ip }}
+      resource_group: ${{ steps.outputs.outputs.resource_group }}
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🔐 Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: 🔧 Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: '1.6.0'
+
+      - name: 📦 Init
+        working-directory: ./infra
+        run: |
+          terraform init \
+            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
+            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
+            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
+            -backend-config="key=prod.terraform.tfstate"
+
+      - name: 🚀 Terraform Apply
+        working-directory: ./infra
+        run: terraform apply -auto-approve
+
+      - name: 📤 Extrair Outputs
+        id: outputs
+        working-directory: ./infra
+        run: |
+          echo "public_ip=$(terraform output -raw public_ip_address)" >> $GITHUB_OUTPUT
+          echo "resource_group=$(terraform output -raw resource_group_name)" >> $GITHUB_OUTPUT
+
+  ansible-configure:
+    if: github.event.inputs.destroy != 'true'
+    name: ⚙️ Configurar VM
+    needs: terraform-deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🔧 Instalar Ansible + sshpass
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible sshpass
+
+      - name: 📝 Criar Inventário Dinâmico
+        run: |
+          cat > inventory.ini <<EOF
+          [vm]
+          ${{ needs.terraform-deploy.outputs.vm_ip }} ansible_user=azureuser ansible_password=${{ secrets.ADMIN_PASSWORD }} ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+          EOF
+
+      - name: 📘 Executar Playbook
+        run: |
+          ansible-playbook -i inventory.ini ansible/playbook.yml \
+            --extra-vars "ansible_sudo_pass=${{ secrets.ADMIN_PASSWORD }}" \
+            -v
+
+  smoke-tests:
+    if: github.event.inputs.destroy != 'false'
+    name: ✅ Pós-Testes
+    needs: ansible-configure
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🔐 Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: 🧪 Testar Swagger
+        run: |
+          IP="${{ needs.terraform-deploy.outputs.vm_ip }}"
+          for i in {1..10}; do
+            if curl -f -s http://${IP}:8081/swagger-ui/index.html > /dev/null; then
+              echo "✅ Swagger OK!"
+              exit 0
+            fi
+            echo "Tentativa $i/10... aguardando 10s"
+            sleep 10
+          done
+          echo "❌ Swagger não respondeu"
+          exit 1
+
+  terraform-destroy:
+    if: github.event.inputs.destroy == 'true'
+    name: 🧨 Destruir Infra
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v4
+
+      - name: 🔐 Azure Login
+        uses: azure/login@v2
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: 🔧 Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: '1.6.0'
+
+      - name: 📦 Init
+        working-directory: ./infra
+        run: |
+          terraform init \
+            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
+            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
+            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
+            -backend-config="key=prod.terraform.tfstate"
+
+      - name: 💥 Terraform Destroy
+        working-directory: ./infra
+        run: terraform destroy -auto-approve
