@@ -1,17 +1,13 @@
-name: 🚀 Deploy Azure VM + Docker Pipeline
+name: 🚀 Deploy Terraform to Azure (Com Destroy Option)
 
+# =====================================================
+# TRIGGERS - Simplificado como o professor quer
+# =====================================================
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - 'infra/**'
-      - 'ansible/**'
-      - '.github/workflows/deploy.yml'
   workflow_dispatch:
     inputs:
       destroy:
-        description: '🧨 DESTRUIR toda infraestrutura?'
+        description: '🧨 DESTRUIR infraestrutura?'
         required: true
         default: 'false'
         type: choice
@@ -24,122 +20,139 @@ permissions:
   contents: read
 
 jobs:
-  terraform-validate:
-    if: github.event.inputs.destroy != 'true'
+  # =========================================
+  # JOB 1: VALIDATE - Só valida, NÃO formata
+  # =========================================
+  validate:
+    if: github.event.inputs.destroy == 'false'
     name: 🔎 Validar Terraform
     runs-on: ubuntu-latest
+    
     steps:
       - name: 📥 Checkout do código
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: 🔐 Login no Azure (OIDC)
+      - name: 🔐 Login no Azure
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 🔧 Setup Terraform
+      - name: 🔧 Instalar Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: '1.6.0'
 
       - name: 📦 Terraform Init
-        working-directory: ./infra
+        working-directory: infra
         run: |
-          terraform init \
-            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
-            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
-            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
-            -backend-config="key=prod.terraform.tfstate"
+          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
+          terraform init -backend-config="key=prod.terraform.tfstate"
 
-      - name: ✅ Terraform Validate
-        working-directory: ./infra
-        run: terraform validate -no-color
+      # =====================================================
+      # REMOVIDO: terraform fmt -check
+      # POR QUÊ? Ele retorna código 1 se arquivos não estão formatados!
+      # ISSO QUEBRA O PIPELINE DESNECESSARIAMENTE
+      # =====================================================
+      
+      - name: ✅ Terraform Validate (Sintaxe)
+        working-directory: infra
+        run: terraform validate
 
-      - name: 📋 Terraform Plan
-        working-directory: ./infra
+      # =====================================================
+      # PLAN SEM SALVAR ARTEFATO - Só valida lógica
+      # =====================================================
+      - name: 📋 Terraform Plan (Dry-run)
+        working-directory: infra
         run: |
           terraform plan \
             -var="resource_group_name=${{ vars.AZURE_RG }}" \
             -var="location=${{ vars.AZURE_LOCATION }}" \
             -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" \
-            -out=tfplan \
-            -input=false \
-            -no-color
+            -input=false
 
-  terraform-deploy:
-    if: github.event.inputs.destroy != 'true'
-    name: 🚀 Deploy Infra
-    needs: terraform-validate
+  # =========================================
+  # JOB 2: DEPLOY - Provisiona e Configura
+  # =========================================
+  deploy:
+    if: github.event.inputs.destroy == 'false'
+    name: 🚀 Deploy e Configuração
+    needs: validate
     runs-on: ubuntu-latest
     outputs:
-      vm_ip: ${{ steps.outputs.outputs.public_ip }}
-      resource_group: ${{ steps.outputs.outputs.resource_group }}
+      vmName: ${{ steps.output_vm.outputs.vm_name }}
+      adminUsername: ${{ steps.output_vm.outputs.admin_username }}
+      publicIP: ${{ steps.output_vm.outputs.public_ip }}
+      nsgName: ${{ steps.output_vm.outputs.nsg_name }}
+      resourceGroup: ${{ steps.output_vm.outputs.resource_group }}
+
     steps:
       - name: 📥 Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: 🔐 Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 🔧 Setup Terraform
+      - name: 🔧 Instalar Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: '1.6.0'
 
-      - name: 📦 Init
-        working-directory: ./infra
+      - name: 📦 Terraform Init
+        working-directory: infra
         run: |
-          terraform init \
-            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
-            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
-            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
-            -backend-config="key=prod.terraform.tfstate"
+          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
+          terraform init -backend-config="key=prod.terraform.tfstate"
 
+      # =====================================================
+      # APLICA SEM PLAN SEPARADO - Simplificado como professor
+      # =====================================================
       - name: 🚀 Terraform Apply
-        working-directory: ./infra
+        working-directory: infra
         run: terraform apply -auto-approve
 
-      - name: 📤 Extrair Outputs
-        id: outputs
-        working-directory: ./infra
+      - name: 📤 Capturar Outputs
+        id: output_vm
+        working-directory: infra
         run: |
+          echo "vm_name=vm-automation" >> $GITHUB_OUTPUT
+          echo "admin_username=azureuser" >> $GITHUB_OUTPUT
           echo "public_ip=$(terraform output -raw public_ip_address)" >> $GITHUB_OUTPUT
+          echo "nsg_name=$(terraform output -raw nsg_name)" >> $GITHUB_OUTPUT
           echo "resource_group=$(terraform output -raw resource_group_name)" >> $GITHUB_OUTPUT
 
-  ansible-configure:
-    if: github.event.inputs.destroy != 'true'
-    name: ⚙️ Configurar VM
-    needs: terraform-deploy
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Checkout
-        uses: actions/checkout@v4
-
-      - name: 🔧 Instalar Ansible + sshpass
+      # =====================================================
+      # CONFIGURAÇÃO ANSIBLE - Mesma lógica do professor
+      # =====================================================
+      - name: 🔧 Instalar Ansible e sshpass
         run: |
           sudo apt-get update
           sudo apt-get install -y ansible sshpass
 
-      - name: 📝 Criar Inventário Dinâmico
+      - name: 📝 Criar Inventário Ansible
         run: |
-          cat > inventory.ini <<EOF
-          [vm]
-          ${{ needs.terraform-deploy.outputs.vm_ip }} ansible_user=azureuser ansible_password=${{ secrets.ADMIN_PASSWORD }} ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-          EOF
+          echo "[vm]" > inventory
+          echo "${{ steps.output_vm.outputs.public_ip }} ansible_user=azureuser ansible_password=${{ secrets.ADMIN_PASSWORD }} ansible_ssh_common_args='-o StrictHostKeyChecking=no'" >> inventory
 
       - name: 📘 Executar Playbook
         run: |
-          ansible-playbook -i inventory.ini ansible/playbook.yml \
-            --extra-vars "ansible_sudo_pass=${{ secrets.ADMIN_PASSWORD }}" \
-            -v
+          ansible-playbook -i inventory ansible/playbook.yml --extra-vars "ansible_sudo_pass=${{ secrets.ADMIN_PASSWORD }}"
 
-  smoke-tests:
-    if: github.event.inputs.destroy != 'false'
-    name: ✅ Pós-Testes
-    needs: ansible-configure
+  # =========================================
+  # JOB 3: POST-TESTS - Validação Final
+  # =========================================
+  post-tests:
+    if: github.event.inputs.destroy == 'false'
+    name: ✅ Pós-Testes de Infra
+    needs: deploy
     runs-on: ubuntu-latest
+    env:
+      PUBLIC_IP: ${{ needs.deploy.outputs.publicIP }}
+      VM_NAME: ${{ needs.deploy.outputs.vmName }}
+      NSG_NAME: ${{ needs.deploy.outputs.nsgName }}
+      RESOURCE_GROUP: ${{ needs.deploy.outputs.resourceGroup }}
+
     steps:
       - name: 🔐 Azure Login
         uses: azure/login@v2
@@ -148,45 +161,74 @@ jobs:
 
       - name: 🧪 Testar Swagger
         run: |
-          IP="${{ needs.terraform-deploy.outputs.vm_ip }}"
-          for i in {1..10}; do
-            if curl -f -s http://${IP}:8081/swagger-ui/index.html > /dev/null; then
-              echo "✅ Swagger OK!"
-              exit 0
-            fi
-            echo "Tentativa $i/10... aguardando 10s"
-            sleep 10
-          done
-          echo "❌ Swagger não respondeu"
-          exit 1
+          echo "Aguardando aplicação subir com Swagger..."
+          sleep 30
+          response=$(curl -s -o /dev/null -w "%{http_code}" http://$PUBLIC_IP:8081/swagger-ui/index.html)
+          if [ "$response" != "200" ]; then
+            echo "❌ Swagger não respondeu como esperado. Status HTTP: $response"
+            exit 1
+          else
+            echo "✅ Swagger disponível em /swagger-ui/index.html na porta 8081!"
+          fi
 
-  terraform-destroy:
+      - name: ✅ Verificar status da VM
+        run: |
+          status=$(az vm get-instance-view \
+            --name "$VM_NAME" \
+            --resource-group "$RESOURCE_GROUP" \
+            --query "instanceView.statuses[?code=='PowerState/running'].displayStatus" \
+            --output tsv)
+
+          echo "Status da VM: $status"
+          if [ "$status" != "VM running" ]; then
+              echo "❌ A VM não está em execução!"
+              exit 1
+          else
+              echo "✅ VM está rodando com sucesso!"
+          fi
+
+      - name: ✅ Verificar regra da NSG
+        run: |
+          result=$(az network nsg rule list \
+            --nsg-name "$NSG_NAME" \
+            --resource-group "$RESOURCE_GROUP" \
+            --query "[?destinationPortRange=='8081' && access=='Allow']")
+
+          if [ "$result" = "[]" ]; then
+            echo "❌ Porta 8081 não está liberada na NSG!"
+            exit 1
+          else
+            echo "✅ Porta 8081 está liberada corretamente na NSG!"
+          fi
+
+  # =========================================
+  # JOB 4: DESTROY - Limpeza
+  # =========================================
+  destroy:
     if: github.event.inputs.destroy == 'true'
-    name: 🧨 Destruir Infra
+    name: 🧨 Destruir Infraestrutura
     runs-on: ubuntu-latest
+
     steps:
       - name: 📥 Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: 🔐 Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 🔧 Setup Terraform
+      - name: 🔧 Instalar Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: '1.6.0'
 
-      - name: 📦 Init
-        working-directory: ./infra
+      - name: 📦 Terraform Init
+        working-directory: infra
         run: |
-          terraform init \
-            -backend-config="resource_group_name=${{ vars.TF_BACKEND_RG }}" \
-            -backend-config="storage_account_name=${{ vars.TF_BACKEND_STORAGE }}" \
-            -backend-config="container_name=${{ vars.TF_BACKEND_CONTAINER }}" \
-            -backend-config="key=prod.terraform.tfstate"
+          export ARM_SUBSCRIPTION_ID=${{ secrets.ARM_SUBSCRIPTION_ID }}
+          terraform init -backend-config="key=prod.terraform.tfstate"
 
       - name: 💥 Terraform Destroy
-        working-directory: ./infra
+        working-directory: infra
         run: terraform destroy -auto-approve
