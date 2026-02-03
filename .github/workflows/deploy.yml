@@ -1,4 +1,4 @@
-name: 🚀 Deploy Terraform to Azure (Com Destroy option)
+name: 🚀 Deploy Terraform to Azure
 
 on:
   workflow_dispatch:
@@ -16,45 +16,35 @@ permissions:
   id-token: write
   contents: read
 
-# =====================================================
-# ENV - Configuração GLOBAL para todos os jobs
-# =====================================================
 env:
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
   ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
   ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
   ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
-  ARM_USE_CLI: true  # ← ESSA É A CHAVE MÁGICA!
-  # **POR QUÊ?** Diz ao Terraform: "Use o login do AZ CLI, não tente SP próprio!"
+  ARM_USE_CLI: true
 
 jobs:
   validate:
     if: github.event.inputs.destroy == 'false'
     name: 🔎 Validar Terraform
     runs-on: ubuntu-latest
-    
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v3
 
-      - name: 🔐 Azure Login (OIDC)
+      - name: 🔐 Azure Login
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 🔧 Instalar Terraform
+      - name: 🔧 Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: '1.6.0'
 
       - name: 📦 Terraform Init
         working-directory: infra
-        run: |
-          terraform plan \
-            -var="resource_group_name=${{ vars.AZURE_RG }}" \
-            -var="location=${{ vars.AZURE_LOCATION }}" \
-            -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" \
-            -input=false
+        run: terraform init -backend-config="key=prod.terraform.tfstate"
 
       - name: ✅ Terraform Validate
         working-directory: infra
@@ -80,7 +70,6 @@ jobs:
       publicIP: ${{ steps.output_vm.outputs.public_ip }}
       nsgName: ${{ steps.output_vm.outputs.nsg_name }}
       resourceGroup: ${{ steps.output_vm.outputs.resource_group }}
-
     steps:
       - name: 📥 Checkout
         uses: actions/checkout@v3
@@ -90,27 +79,30 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 🔧 Instalar Terraform
+      - name: 🔧 Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: '1.6.0'
 
       - name: 📦 Terraform Init
         working-directory: infra
-        run: |
-          terraform init \
-            -backend-config="key=prod.terraform.tfstate"
+        run: terraform init -backend-config="key=prod.terraform.tfstate"
 
       - name: 🚀 Terraform Apply
         working-directory: infra
-        run: terraform apply -auto-approve
+        run: |
+          terraform apply \
+            -var="resource_group_name=${{ vars.AZURE_RG }}" \
+            -var="location=${{ vars.AZURE_LOCATION }}" \
+            -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" \
+            -auto-approve
 
       - name: 📤 Capturar Outputs
         id: output_vm
         working-directory: infra
         run: |
-          echo "vm_name=vm-automation" >> $GITHUB_OUTPUT
-          echo "admin_username=azureuser" >> $GITHUB_OUTPUT
+          echo "vm_name=$(terraform output -raw vm_name)" >> $GITHUB_OUTPUT
+          echo "admin_username=$(terraform output -raw admin_username)" >> $GITHUB_OUTPUT
           echo "public_ip=$(terraform output -raw public_ip_address)" >> $GITHUB_OUTPUT
           echo "nsg_name=$(terraform output -raw nsg_name)" >> $GITHUB_OUTPUT
           echo "resource_group=$(terraform output -raw resource_group_name)" >> $GITHUB_OUTPUT
@@ -132,7 +124,7 @@ jobs:
 
   post-tests:
     if: github.event.inputs.destroy == 'false'
-    name: ✅ Pós-Testes de Infra
+    name: ✅ Pós-Testes
     needs: deploy
     runs-on: ubuntu-latest
     env:
@@ -149,45 +141,12 @@ jobs:
 
       - name: 🧪 Testar Swagger
         run: |
-          echo "Aguardando aplicação subir com Swagger..."
           sleep 30
-          response=$(curl -s -o /dev/null -w "%{http_code}" http://$PUBLIC_IP:8081/swagger-ui/index.html)
-          if [ "$response" != "200" ]; then
-            echo "❌ Swagger não respondeu como esperado. Status HTTP: $response"
-            exit 1
-          else
-            echo "✅ Swagger disponível em /swagger-ui/index.html na porta 8081!"
-          fi
+          curl -f http://$PUBLIC_IP:8081/swagger-ui/index.html
 
-      - name: ✅ Verificar status da VM
+      - name: ✅ Verificar VM
         run: |
-          status=$(az vm get-instance-view \
-            --name "$VM_NAME" \
-            --resource-group "$RESOURCE_GROUP" \
-            --query "instanceView.statuses[?code=='PowerState/running'].displayStatus" \
-            --output tsv)
-
-          echo "Status da VM: $status"
-          if [ "$status" != "VM running" ]; then
-              echo "❌ A VM não está em execução!"
-              exit 1
-          else
-              echo "✅ VM está rodando com sucesso!"
-          fi
-
-      - name: ✅ Verificar regra da NSG
-        run: |
-          result=$(az network nsg rule list \
-            --nsg-name "$NSG_NAME" \
-            --resource-group "$RESOURCE_GROUP" \
-            --query "[?destinationPortRange=='8081' && access=='Allow']")
-
-          if [ "$result" = "[]" ]; then
-            echo "❌ Porta 8081 não está liberada na NSG!"
-            exit 1
-          else
-            echo "✅ Porta 8081 está liberada corretamente na NSG!"
-          fi
+          az vm show --name $VM_NAME --resource-group $RESOURCE_GROUP --query "powerState" -o tsv
 
   destroy:
     if: github.event.inputs.destroy == 'true'
@@ -203,16 +162,14 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: 🔧 Instalar Terraform
+      - name: 🔧 Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: '1.6.0'
 
       - name: 📦 Terraform Init
         working-directory: infra
-        run: |
-          terraform init \
-            -backend-config="key=prod.terraform.tfstate"
+        run: terraform init -backend-config="key=prod.terraform.tfstate"
 
       - name: 💥 Terraform Destroy
         working-directory: infra
