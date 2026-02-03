@@ -1,4 +1,4 @@
-# Configuração do Backend Remoto para salvar o estado na Azure
+# Configuração do Backend Remoto - Estado salvo na Azure
 terraform {
   backend "azurerm" {
     resource_group_name  = "rg-tfstate"
@@ -12,7 +12,7 @@ provider "azurerm" {
   features {}
 }
 
-# 1. Criação do Grupo de Recursos
+# 1. Grupo de Recursos
 resource "azurerm_resource_group" "rg" {
   name     = var.resource_group_name
   location = var.location
@@ -57,7 +57,7 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 
-# 6. Grupo de Segurança (NSG) com regras SSH e Swagger
+# 6. Grupo de Segurança (NSG)
 resource "azurerm_network_security_group" "nsg" {
   name                = "nsg-vm"
   location            = azurerm_resource_group.rg.location
@@ -88,18 +88,18 @@ resource "azurerm_network_security_group" "nsg" {
   }
 }
 
-# 7. Associação do NSG à Interface de Rede
+# 7. Associação NSG e NIC
 resource "azurerm_network_interface_security_group_association" "nsg_assoc" {
   network_interface_id      = azurerm_network_interface.nic.id
   network_security_group_id = azurerm_network_security_group.nsg.id
 }
 
-# 8. Máquina Virtual Linux (VM) - Configurada para D2s_v3
+# 8. Máquina Virtual Linux (VM) - ATUALIZADA PARA UBUNTU 22.04
 resource "azurerm_linux_virtual_machine" "vm" {
   name                            = "vm-automation"
   resource_group_name             = azurerm_resource_group.rg.name
   location                        = azurerm_resource_group.rg.location
-  size                            = "Standard_D2s_v3" # Novo tamanho para evitar SkuNotAvailable
+  size                            = "Standard_D2s_v3"
   admin_username                  = "azureuser"
   admin_password                  = var.admin_password
   disable_password_authentication = false
@@ -115,8 +115,29 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   source_image_reference {
     publisher = "Canonical"
-    offer     = "0001-com-ubuntu-server-focal"
-    sku       = "20_04-lts"
+    offer     = "0001-com-ubuntu-server-jammy" # Atualizado: Jammy é o codinome do 22.04
+    sku       = "22_04-lts"                   # Atualizado: Garante Python 3.10 para o Ansible
     version   = "latest"
   }
+}
+
+# Outputs necessários para o pipeline do GitHub Actions
+output "public_ip_address" {
+  value = azurerm_public_ip.public_ip.ip_address
+}
+
+output "vm_name" {
+  value = azurerm_linux_virtual_machine.vm.name
+}
+
+output "admin_username" {
+  value = azurerm_linux_virtual_machine.vm.admin_username
+}
+
+output "nsg_name" {
+  value = azurerm_network_security_group.nsg.name
+}
+
+output "resource_group_name" {
+  value = azurerm_resource_group.rg.name
 }
