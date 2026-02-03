@@ -50,8 +50,11 @@ jobs:
       - name: 📦 Terraform Init
         working-directory: infra
         run: |
-          terraform init \
-            -backend-config="key=prod.terraform.tfstate"
+          terraform plan \
+            -var="resource_group_name=${{ vars.AZURE_RG }}" \
+            -var="location=${{ vars.AZURE_LOCATION }}" \
+            -var="admin_password=${{ secrets.ADMIN_PASSWORD }}" \
+            -input=false
 
       - name: ✅ Terraform Validate
         working-directory: infra
